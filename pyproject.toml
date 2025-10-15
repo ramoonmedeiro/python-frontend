@@ -9,7 +9,8 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "reactpy[fastapi] (>=1.1.0,<2.0.0)",
-    "reactpy-router (>=2.0.0,<3.0.0)"
+    "reactpy-router (>=2.0.0,<3.0.0)",
+    "reactpy-utils (>=0.0.33,<0.0.34)"
 ]
 
 
