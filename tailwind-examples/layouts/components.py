@@ -4,88 +4,77 @@ cdn = html.script({"src": "https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"}
 
 @component
 def Home():
-    return html.div(
+    return html._(
         cdn,
-        # Exemplo 1
         html.div(
-            {"class": "container bg-red-300 mx-auto my-4 p-4 border-2"},
-            html.p("O texto do container")
-        ),
-        # Border Box e Box content
-        html.div(
-            {"class": "container bg-purple-400 m-4 border-box p-10 border-4 border-red-300"},
-            html.p("Border box")
+            {
+                "class": "container bg-red-300 mx-auto my-4 p-4 text-blue-900 border-2 border-black"
+            },
+            html.p("Olá")
         ),
         html.div(
-            {"class": "container bg-teal-400 m-4 box-content p-10 border-4 border-teal-900"},
-            html.p("Box content")
+            {
+                "class": "container bg-green-700 md:bg-blue-900"
+            },
+            "OI"
         ),
-        # DISPLAY
+        # Border Box e Border Content
+        html.div(
+            {"class": "container bg-purple-700 m-4 border-2 border-box p-10"},
+            "Border BOX"
+        ),
+        html.div(
+            {"class": "container bg-teal-500 m-4 border-2 border-content p-10"},
+            "Box Content"
+        ),
+        # Blocks
         html.div(
             {"class": "container"},
             html.span(
-                {"class":"block"},
-                "Não são elementos de bloco"
+                {"class": "block bg-red-500"},
+                "Bloco 1"
             ),
             html.span(
-                {"class":"block"},
-                "Não são elementos de bloco"
+                {"class": "block bg-red-500"},
+                "Bloco 2"
+            ),
+            html.div(
+                {"class": "bg-purple-500 inline-block"},
+                "Bloco div 1"
+            ),
+            html.div(
+                {"class": "bg-purple-500 inline-block mx-2"},
+                "Bloco div 2"
             )
         ),
-        # Exercício sobre display
-        # Criar 3 divs, deixar as 3 inline e colocar bg distintos para cada
+        # inline-block
         html.div(
-            {"class": "container bg-teal-200 p-6"},
+            {"class": "container bg-green-700 p-4 my-4"},
             html.div(
-                {"class": "bg-green-800 inline-block"},
-                "DIV 1"
-            ),
-            html.div(
-                {"class": "bg-blue-800 inline-block"},
-                "DIV 2"
+                {"class": "bg-red-700 inline-block mx-2"},
+                "div 1"
             ),
             html.div(
-                {"class": "bg-red-800 inline-block"},
-                "DIV 3"
+                {"class": "bg-blue-700 inline-block mx-2"},
+                "div 2"
             ),
-        ),
-        # Overflow
-        html.div(
-            {"class": "overflow-auto h-16 m-6 bg-red-900"},
-            html.p(
-                "Testando overflow"
-            ),
-            html.p(
-                "Testando overflow"
-            ),
-            html.p(
-                "Testando overflow"
-            ),
-            html.p(
-                "Testando overflow"
-            ),
-            html.p(
-                "Testando overflow"
-            ),
-            html.p(
-                "Testando overflow"
+            html.div(
+                {"class": "bg-yellow-700 inline-block mx-2"},
+                "div 3"
             )
         ),
         # Positions
         html.div(
-            {"class": "absolute top-0 right-0 bg-pink-900"},
-            "ABSOLUTE"
-        ),
-        # Z-index
-        html.div(
-            {"class": "container relative"},
+            {"class": "relative bg-green-200 p-5"},
+            "AI",
             html.div(
-                {"class":"bg-red-300 h-20 w-20 p-6 absolute z-10"},
-                "DIV 1"
-            ),
-            html.div(
-                {"class": "bg-red-500 h-20 w-20 p-6 absolute m-4"},
-                "DIV 2"
+                {"class": "absolute top-0 right-0 bg-pink-300"},
+                "Absolute"
             )
+        ),
+        # Visibility
+        html.div(
+            {"class": "container bg-red-600 m-4 border-3 p-4 invisible"},
+            "Estou oculto"
         )
     )
