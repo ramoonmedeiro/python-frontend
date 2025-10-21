@@ -1,0 +1,12 @@
+.section-one {
+    background: deeppink;
+    width: 200px;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 20px;
+}
+
+.section-two {
+    background: cyan;
+    margin: 10px;
+}
