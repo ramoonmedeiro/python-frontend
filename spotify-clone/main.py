@@ -9,8 +9,7 @@ from fastapi.staticfiles import StaticFiles
 from pathlib import Path
 
 # Components
-from components.health import Health
-from components.index import Index
+from components import Index
 
 
 STATIC_DIR = Path(__file__).parent / "static"
@@ -18,7 +17,6 @@ STATIC_DIR = Path(__file__).parent / "static"
 @component
 def Route():
     return browser_router(
-        route("/health", Health()),
         route("/", Index())
     )
 
